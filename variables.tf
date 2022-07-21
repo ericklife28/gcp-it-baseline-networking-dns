@@ -1,14 +1,14 @@
-variable "build_project_id" {
+variable "project_id" {
   type = string
 }
 
-variable "environments_project_id" {
+variable "environment" {
   type = string
 }
 
 
 variable "organization" {
-  type = string 
+  type = string
 }
 
 variable "deploy" {
