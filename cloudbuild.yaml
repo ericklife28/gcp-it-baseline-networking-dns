@@ -38,12 +38,10 @@ steps:
                 
         cp config.google.tmpl config.google.tfbackend
         sed -i s/ORG/$$ORG/g config.google.tfbackend
-        sed -i s/BUCKET_ENVIRONMENT/$$BUCKET_ENVIRONMENT/g config.google.tfbackend
         sed -i s/ENVIRONMENT/$$ENVIRONMENT/g config.google.tfbackend
         terraform init -backend-config=config.google.tfbackend
     env:
     - 'ORG=bodendava'
-    - 'BUCKET_ENVIRONMENT=bld'
         
   # [START tf-plan]
   - id: 'tf plan'

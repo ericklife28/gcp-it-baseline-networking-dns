@@ -1,2 +1,3 @@
-variable1        = "value1"
-variable2        = "value2"
+environment                   = "dev"
+organization                  = "bodendava"
+deploy_infra                  = false

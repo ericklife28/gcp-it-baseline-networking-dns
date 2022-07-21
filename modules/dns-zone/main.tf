@@ -1,4 +1,4 @@
-resource google_dns_managed_zone managedservices_zone {
+resource "google_dns_managed_zone" "managedservices_zone" {
   name        = "managedservices-zone"
   dns_name    = "gcp.mcc.com."
   description = "Example private DNS zone"
@@ -18,7 +18,7 @@ resource google_dns_managed_zone managedservices_zone {
 }
 
 
-resource google_dns_record_set redis {
+resource "google_dns_record_set" "redis" {
   name = "redis.${google_dns_managed_zone.managedservices_zone.dns_name}"
   type = "A"
   ttl  = 300
